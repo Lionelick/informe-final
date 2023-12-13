@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <machine.h>
+#include <utime.h>
+
+int main() {
+  printf("Hello, Pi Pico!\n");
+
+  pin_t led = pin_create(5, PIN_OUTPUT);
+  while (1) {
+    pin_toggle(led);
+    sleep(1);
+  }
+  return 0;
+}
